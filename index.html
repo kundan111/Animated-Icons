@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Animated icons</title>
+  <style>
+      #chain{
+        font-size: 150px;
+        margin: 20px 200px 20px 200px;
+      }
+
+      #battery{
+        font-size: 150px;
+      }
+
+      #hourGlass{
+        font-size: 150px;
+        margin: 20px 200px 20px 200px;
+      }
+  </style>
+</head>
+<body>
+  <div id="chain" class="fa ">
+
+  </div>
+
+  <div id="battery" class="fa ">
+
+  </div>
+
+  <div id="hourGlass" class="fa ">
+
+  </div>
+  <script>
+    function brakeChain(){
+      var chain = document.getElementById("chain");
+      chain.innerHTML= "&#xf0c1;";
+
+
+
+      setTimeout(function(){
+        chain.innerHTML="&#xf127;";
+
+      },1000)
+    }
+
+    brakeChain();
+
+  //animate every 2 seconds
+    setInterval(brakeChain,2000);
+
+  //battery charge function
+
+  function batteryCharging(){
+    var battery = document.getElementById('battery');
+    battery.innerHTML="&#xf244;";
+
+    setTimeout(function(){
+      battery.innerHTML="&#xf243;";
+    },1000)
+
+    setTimeout(function(){
+      battery.innerHTML="&#xf242;";
+    },2000)
+
+    setTimeout(function(){
+      battery.innerHTML="&#xf241;";
+    },3000)
+
+    setTimeout(function(){
+      battery.innerHTML="&#xf240;";
+    },4000)
+
+
+  }
+
+batteryCharging();
+
+//animate it every 5 seconds
+setInterval(batteryCharging,5000);
+
+//sandglass
+
+function sandFalling(){
+  var sandGlass= document.getElementById('hourGlass');
+  sandGlass.innerHTML= "&#xf251;";
+
+  setTimeout(function(){
+    sandGlass.innerHTML= "&#xf252;";
+  },1000)
+
+  setTimeout(function(){
+    sandGlass.innerHTML= "&#xf253;";
+  },2000)
+
+
+}
+
+sandFalling();
+
+setInterval(sandFalling,3000);
+
+
+
+  </script>
+</body>
+</html>
